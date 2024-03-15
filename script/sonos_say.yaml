@@ -233,7 +233,7 @@ sequence:
   - service: tts.speak
     data:
       cache: true
-      entity_id: "{{ entity_group_leader }}"
+      media_player_entity_id: "{{ entity_group_leader }}"
       message: "{{ message }}"
       language: "{{ tts_language }}"
     target:
