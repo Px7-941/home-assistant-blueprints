@@ -230,7 +230,7 @@ sequence:
       is_volume_muted: false
 
   # FINALLY the actual call to say the message
-  - service: "{{ tts_engine }}"
+  - service: tts.speak
     data:
       cache: true
       entity_id: "{{ entity_group_leader }}"
