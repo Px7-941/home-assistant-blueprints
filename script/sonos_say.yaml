@@ -232,9 +232,12 @@ sequence:
   # FINALLY the actual call to say the message
   - service: "{{ tts_engine }}"
     data:
+      cache: true
       entity_id: "{{ entity_group_leader }}"
       message: "{{ message }}"
       language: "{{ tts_language }}"
+    target:
+      entity_id: "{{ tts_engine }}"
 
   # not sure why, but setting the repeat doesn't always properly take
   # I can see it changing in the state  when the TTY goes the repeat
